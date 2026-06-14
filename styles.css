@@ -976,16 +976,6 @@ li {
     margin-top: 2rem;
   }
 
-  /* Charts scroll horizontally so SVG text stays readable */
-  .cs-chart {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .cs-chart svg {
-    min-width: 540px;
-    max-width: none;
-  }
 
   .metrics-callout {
     padding: 1.25rem 1.25rem;
