@@ -379,6 +379,15 @@ li {
   margin-bottom: 1rem;
 }
 
+.card::after {
+  content: "Read →";
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
 .card-tags {
   display: flex;
   flex-wrap: wrap;
