@@ -194,14 +194,14 @@ li {
    Stacks vertically on mobile.
 */
 .hero {
-  padding-top: 120px; /* offset for fixed nav */
-  padding-bottom: 80px;
+  padding-top: 96px; /* offset for fixed nav */
+  padding-bottom: 56px;
 }
 
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
 }
 
@@ -224,8 +224,13 @@ li {
   font-size: 0.975rem;
   color: var(--text-muted);
   max-width: 560px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.75;
+}
+
+/* Add spacing only after the last bio paragraph before the links */
+.hero-text .bio:last-of-type {
+  margin-bottom: 1.75rem;
 }
 
 .hero-links {
@@ -264,14 +269,21 @@ li {
 
 /* === RESULTS SECTION ===
    Four prominent numbers across the full width.
-   No section heading — numbers speak for themselves.
+   A short context line sits above the grid.
 */
 .results {
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 60px 0;
+  padding: 44px 0;
   transition: background-color 0.2s ease;
+}
+
+/* Short intro line above the numbers */
+.results-context {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
 }
 
 .results-grid {
@@ -307,7 +319,7 @@ li {
    Each card links to its own page.
 */
 .work {
-  padding: 80px 0;
+  padding: 56px 0;
 }
 
 .section-label {
@@ -328,7 +340,7 @@ li {
 /* Each card is a full-width <a> link */
 .card {
   display: block;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: var(--text);
@@ -392,7 +404,7 @@ li {
    Simple centered contact block.
 */
 .contact {
-  padding: 80px 0;
+  padding: 56px 0;
   border-top: 1px solid var(--border);
   background-color: var(--bg-secondary);
   transition: background-color 0.2s ease;
@@ -722,8 +734,8 @@ li {
 
   /* Hero stacks vertically, photo above text on mobile */
   .hero {
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 44px;
   }
 
   .hero-inner {
@@ -773,11 +785,11 @@ li {
 
   /* Sections padding */
   .work {
-    padding: 60px 0;
+    padding: 44px 0;
   }
 
   .contact {
-    padding: 60px 0;
+    padding: 44px 0;
   }
 
   /* Footer stacks */
