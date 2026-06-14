@@ -62,18 +62,6 @@
       </div>
 
 
-      <!-- ============================================================
-           CASE STUDY BODY
-           Replace the content below with the rendered output
-           from case-study-2.md. Convert markdown to HTML:
-             # → <h2>, ## → <h3>, paragraphs → <p>, lists → <ul>
-
-           NOTE: The .md file has four [image] tags in the
-           "How the agents are helping" section. Each has been
-           replaced with a styled placeholder block below.
-           Swap the .img-placeholder divs for <img> tags when
-           you have the actual screenshots.
-      ============================================================ -->
       <div class="cs-body">
 
         <p>As Spike's Content Marketer, I need to keep tabs on crucial information. How is our content performing? What are competitors shipping? What is the industry talking about?</p>
@@ -91,25 +79,54 @@
 
         <h2>How the agents are helping</h2>
 
-        <p>Instead of pulling GA reports manually, the team now asks Annie directly in Slack. When Kaushik (Spike's founder) needed traffic data for spike.sh/alerts, he had the answer in seconds.</p>
+        <p>Instead of pulling GA reports manually, the team now asks Annie directly in Slack. When Spike's founder needed traffic data for spike.sh/alerts, he had the answer in seconds.</p>
 
-        <!-- Replace with actual screenshot when available -->
-        <div class="img-placeholder">Screenshot coming soon</div>
+        <figure>
+          <img src="../images/annie.png" alt="Annie answering a traffic question in Slack" class="cs-image">
+          <figcaption>Annie answering a traffic query in Slack</figcaption>
+        </figure>
 
         <p>With 300+ blog posts, broken links were easy to miss. Nora fixed that. Every week, she surfaces them so we can fix them quickly.</p>
 
-        <!-- Replace with actual screenshot when available -->
-        <div class="img-placeholder">Screenshot coming soon</div>
+        <figure>
+          <img src="../images/Nora.png" alt="Nora's weekly broken link report in Slack" class="cs-image">
+          <figcaption>Nora's weekly broken link report</figcaption>
+        </figure>
 
         <p>Dhurandhar keeps the whole team informed about competitor moves every week. Once when a competitor released a new admin dashboard feature, our team found it useful and immediately created a Linear ticket to build something similar.</p>
 
-        <!-- Replace with actual screenshot when available -->
-        <div class="img-placeholder">Screenshot coming soon</div>
+        <figure>
+        <div class="cs-slideshow" id="dhurandhar-slides">
+          <img src="../images/dhurandhar-1.png" alt="Dhurandhar's competitor intelligence report in Slack" class="cs-slide cs-image active">
+          <img src="../images/dhurandhar-2.png" alt="A Linear ticket created from Dhurandhar's report" class="cs-slide cs-image">
+          <div class="cs-slideshow-controls">
+            <button class="cs-slide-btn" onclick="slideShow('dhurandhar-slides', -1)">←</button>
+            <span class="cs-slide-counter" id="dhurandhar-slides-counter">1 / 2</span>
+            <button class="cs-slide-btn" onclick="slideShow('dhurandhar-slides', 1)">→</button>
+          </div>
+        </div>
+        <figcaption>Dhurandhar's update → a Linear ticket is created</figcaption>
+        </figure>
+
+        <script>
+          function slideShow(id, dir) {
+            var ss = document.getElementById(id);
+            var slides = ss.querySelectorAll('.cs-slide');
+            var counter = document.getElementById(id + '-counter');
+            var current = Array.from(slides).findIndex(function(s) { return s.classList.contains('active'); });
+            slides[current].classList.remove('active');
+            current = (current + dir + slides.length) % slides.length;
+            slides[current].classList.add('active');
+            counter.textContent = (current + 1) + ' / ' + slides.length;
+          }
+        </script>
 
         <p>Incident Magazine brings the incident management industry's top stories directly to Slack every week. The team stays connected to what the industry is talking about without having to go looking for it.</p>
 
-        <!-- Replace with actual screenshot when available -->
-        <div class="img-placeholder">Screenshot coming soon</div>
+        <figure>
+          <img src="../images/incident-magazine.png" alt="Incident Magazine weekly digest in Slack" class="cs-image">
+          <figcaption>Incident Magazine's weekly digest in Slack</figcaption>
+        </figure>
 
         <p>None of this was in my job description. I built these tools because I saw the need and believed a well-informed team makes better decisions.</p>
 

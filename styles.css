@@ -568,6 +568,8 @@ li {
   letter-spacing: -0.02em;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
 }
 
 .cs-body h3 {
@@ -598,8 +600,30 @@ li {
   color: var(--text);
 }
 
+.cs-body figure {
+  margin: 1.5rem auto;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.cs-body figure .cs-image {
+  margin: 0;
+}
+
+.cs-body figcaption {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.6rem;
+  line-height: 1.5;
+}
+
 .cs-body a {
   color: var(--text);
+}
+
+.cs-body a:hover {
+  color: var(--accent);
 }
 
 
@@ -669,20 +693,98 @@ li {
 }
 
 
-/* === IMAGE PLACEHOLDER ===
-   Used in Case Study 2 where screenshots will be added later.
+/* === CASE STUDY IMAGES ===
+   Full-width images embedded in case study body.
 */
-.img-placeholder {
-  border: 2px dashed var(--border);
-  background-color: var(--placeholder-bg);
-  border-radius: 4px;
-  padding: 2.5rem 1rem;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.875rem;
-  margin: 1.5rem 0;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+.cs-image {
+  max-width: 100%;
+  max-height: 520px;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  margin: 1.5rem auto;
+  display: block;
+  filter: brightness(0.85);
 }
+
+.cs-slideshow {
+  margin: 1.5rem auto;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.cs-slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 0;
+  margin: 0;
+  filter: brightness(0.85);
+}
+
+.cs-slide.active {
+  display: block;
+}
+
+.cs-slideshow-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0.65rem 1rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+}
+
+.cs-slide-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.2rem 0.7rem;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.cs-slide-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.cs-slide-counter {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+
+/* === INLINE CHARTS ===
+   SVG data charts embedded directly in case study pages.
+*/
+.cs-chart {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.cs-chart svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cs-chart figcaption {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
 
 
 /* === CASE STUDY BOTTOM NAV ===
@@ -872,6 +974,17 @@ li {
   .cs-body h2 {
     font-size: 1.15rem;
     margin-top: 2rem;
+  }
+
+  /* Charts scroll horizontally so SVG text stays readable */
+  .cs-chart {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cs-chart svg {
+    min-width: 540px;
+    max-width: none;
   }
 
   .metrics-callout {
