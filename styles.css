@@ -371,12 +371,6 @@ li {
   max-width: 640px;
 }
 
-.card-title::after {
-  content: " ↗";
-  font-weight: 400;
-  color: var(--text-muted);
-}
-
 .card-desc {
   font-size: 0.925rem;
   color: var(--text-muted);
