@@ -10,19 +10,22 @@
 */
 :root {
   --bg:             #111111;
-  --bg-secondary:   #1a1a1a;
+  --bg-secondary:   #161616;
   --text:           #eeeeee;
   --text-muted:     #888888;
-  --border:         #2e2e2e;
-  --card-bg:        #181818;
-  --tag-bg:         #252525;
-  --tag-text:       #aaaaaa;
+  --border:         #2a2a2a;
+  --tag-bg:         #1e1e1e;
+  --tag-text:       #999999;
   --nav-bg:         rgba(17, 17, 17, 0.96);
   --link:           #eeeeee;
-  --link-hover:     #aaaaaa;
-  --callout-bg:     #1c1c1c;
-  --callout-border: #383838;
-  --placeholder-bg: #222222;
+  --link-hover:     #c9a96e;
+  --callout-bg:     #181818;
+  --callout-border: #c9a96e;
+  --placeholder-bg: #1e1e1e;
+
+  /* Accent — warm amber. Change this one value to retheme. */
+  --accent:         #c9a96e;
+  --accent-dim:     rgba(201, 169, 110, 0.12);
 }
 
 
@@ -148,7 +151,7 @@ li {
 }
 
 .nav-links a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 
@@ -170,10 +173,10 @@ li {
 }
 
 .hero-text h1 {
-  font-size: 2.25rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
   margin-bottom: 0.75rem;
 }
 
@@ -215,8 +218,8 @@ li {
 }
 
 .hero-links a:hover {
-  color: var(--text-muted);
-  border-color: var(--text-muted);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .hero-photo {
@@ -269,6 +272,7 @@ li {
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1;
+  color: var(--accent);
 }
 
 .result-label {
@@ -308,15 +312,23 @@ li {
   border-bottom: 1px solid var(--border);
   text-decoration: none;
   color: var(--text);
-  transition: background-color 0.15s ease;
+  border-left: 2px solid transparent;
+  padding-left: 0;
+  transition: border-color 0.2s ease, padding-left 0.2s ease;
 }
 
 .card:hover {
   color: var(--text);
+  border-left-color: var(--accent);
+  padding-left: 1rem;
 }
 
 .card:hover .card-title {
-  color: var(--text-muted);
+  color: var(--text);
+}
+
+.card:hover .card-number {
+  color: var(--accent);
 }
 
 .card-number {
@@ -326,6 +338,7 @@ li {
   letter-spacing: 0.1em;
   color: var(--text-muted);
   margin-bottom: 0.75rem;
+  transition: color 0.2s ease;
 }
 
 .card-title {
@@ -355,12 +368,12 @@ li {
 .tag {
   font-size: 0.775rem;
   font-weight: 500;
-  background-color: var(--tag-bg);
-  color: var(--tag-text);
+  background-color: var(--accent-dim);
+  color: var(--accent);
   padding: 0.25rem 0.65rem;
   border-radius: 3px;
   letter-spacing: 0.01em;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  border: 1px solid rgba(201, 169, 110, 0.2);
 }
 
 
@@ -442,7 +455,7 @@ li {
 }
 
 .footer-links a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 
@@ -474,7 +487,7 @@ li {
 }
 
 .back-link:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 
@@ -577,11 +590,10 @@ li {
 */
 .metrics-callout {
   background-color: var(--callout-bg);
-  border-left: 3px solid var(--text);
+  border-left: 3px solid var(--accent);
   border-radius: 0 4px 4px 0;
   padding: 1.5rem 1.75rem;
   margin: 2.5rem 0;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .metrics-callout h3 {
@@ -618,6 +630,7 @@ li {
   font-weight: 700;
   letter-spacing: -0.02em;
   flex-shrink: 0;
+  color: var(--accent);
 }
 
 .metrics-callout .metric-label {
@@ -665,7 +678,7 @@ li {
 }
 
 .cs-nav a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .cs-nav-prev::before {
