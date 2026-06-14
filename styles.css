@@ -202,6 +202,28 @@ li {
   line-height: 1.75;
 }
 
+.hero-text .bio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  max-width: 560px;
+}
+
+.hero-text .bio-list li {
+  font-size: 0.975rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.hero-text .bio-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
 /* Inline links in bio stay gray but get an underline */
 .hero-text .bio a {
   color: var(--text-muted);
