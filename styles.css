@@ -589,7 +589,20 @@ li {
 
 /* === METRICS CALLOUT BLOCK ===
    Highlighted block for the results / numbers section.
+   The heading sits above the card, not inside it.
 */
+
+/* h2 heading that appears directly above the metrics card */
+.metrics-heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
 .metrics-callout {
   background-color: var(--callout-bg);
   border-left: 3px solid var(--accent);
