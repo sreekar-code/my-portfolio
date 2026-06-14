@@ -486,7 +486,7 @@ li {
    Wraps the entire case study page below the nav.
 */
 .case-study-page {
-  padding-top: 80px; /* offset for fixed nav */
+  padding-top: 40px;
   padding-bottom: 80px;
 }
 
