@@ -608,13 +608,13 @@ li {
    The heading sits above the card, not inside it.
 */
 
-/* h2 heading that appears directly above the metrics card — matches body h2 style */
+/* h2 heading above the overview card — matches body h2 style */
 .metrics-heading {
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text);
-  margin-top: 2.5rem;
+  margin-top: 0;
   margin-bottom: 0.75rem;
 }
 
