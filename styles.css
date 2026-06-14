@@ -767,9 +767,9 @@ li {
 /* === INLINE CHARTS ===
    SVG data charts embedded directly in case study pages.
 */
-.cs-chart {
-  margin: 2rem 0;
+.cs-body figure.cs-chart {
   width: 100%;
+  margin: 2rem 0;
 }
 
 .cs-chart svg {
