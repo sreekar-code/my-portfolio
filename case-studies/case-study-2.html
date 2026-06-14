@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How I built Spike's AI marketing stack — Sreekar Kutadi">
+  <title>AI Marketing Stack — Sreekar Kutadi</title>
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Apply saved theme before page renders to prevent flash -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV — same structure as homepage, paths go up one level
+  ============================================================ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-name">Sreekar Kutadi</a>
+      <div class="nav-links">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">Dark</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       CASE STUDY CONTENT
+  ============================================================ -->
+  <main class="case-study-page">
+    <div class="container--narrow">
+
+      <!-- Back link -->
+      <a href="../index.html#work" class="back-link">← Back to work</a>
+
+      <!-- Eyebrow: number · company · type -->
+      <p class="cs-eyebrow">Case Study 02 · Spike.sh · AI + Marketing Ops</p>
+
+      <!-- Title -->
+      <h1 class="cs-title">How I built Spike's AI marketing stack</h1>
+
+      <!-- Meta bar: role · company · timeline -->
+      <div class="cs-meta">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span>Content Marketer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Company</span>
+          <span>Spike (spike.sh)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Timeline</span>
+          <span>2025 – Present</span>
+        </div>
+      </div>
+
+
+      <!-- ============================================================
+           CASE STUDY BODY
+           Replace the content below with the rendered output
+           from case-study-2.md. Convert markdown to HTML:
+             # → <h2>, ## → <h3>, paragraphs → <p>, lists → <ul>
+
+           NOTE: The .md file has four [image] tags in the
+           "How the agents are helping" section. Each has been
+           replaced with a styled placeholder block below.
+           Swap the .img-placeholder divs for <img> tags when
+           you have the actual screenshots.
+      ============================================================ -->
+      <div class="cs-body">
+
+        <!-- PLACEHOLDER — replace with content from case-study-2.md -->
+        <p><em>Content from case-study-2.md goes here. Replace this placeholder with the full case study body, converting markdown headings, paragraphs, and lists to the HTML elements above.</em></p>
+
+        <!-- --------------------------------------------------------
+             IMAGE PLACEHOLDERS
+             The .md file has four [image] tags in the
+             "How the agents are helping" section.
+             Replace each .img-placeholder div below with an <img>
+             tag once you have the actual screenshots.
+        -------------------------------------------------------- -->
+
+        <!-- Image placeholder 1 -->
+        <div class="img-placeholder">Screenshot coming soon</div>
+
+        <!-- Image placeholder 2 -->
+        <div class="img-placeholder">Screenshot coming soon</div>
+
+        <!-- Image placeholder 3 -->
+        <div class="img-placeholder">Screenshot coming soon</div>
+
+        <!-- Image placeholder 4 -->
+        <div class="img-placeholder">Screenshot coming soon</div>
+
+      </div>
+      <!-- END CASE STUDY BODY -->
+
+
+      <!-- ============================================================
+           METRICS CALLOUT BLOCK
+           Key results, highlighted. Update as needed.
+      ============================================================ -->
+      <div class="metrics-callout">
+        <h3>Results</h3>
+        <ul>
+          <li>
+            <span class="metric-number">4</span>
+            <span class="metric-label">AI agents built from scratch</span>
+          </li>
+          <li>
+            <span class="metric-number">Hours</span>
+            <span class="metric-label">Of manual marketing work automated each week</span>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- ============================================================
+           BOTTOM NAVIGATION — previous / next case study
+      ============================================================ -->
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="case-study-1.html" class="cs-nav-prev">Content-Led Growth</a>
+        <a href="case-study-3.html" class="cs-nav-next">Topical Authority</a>
+      </nav>
+
+    </div>
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER — same as homepage
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Sreekar Kutadi</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/sreekar-writer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:sreekar.work@gmail.com">Email</a>
+      </div>
+      <span>© 2026 Sreekar Kutadi</span>
+    </div>
+  </footer>
+
+
+  <!-- Theme toggle script -->
+  <script>
+    var btn  = document.getElementById('themeToggle');
+    var html = document.documentElement;
+    btn.textContent = html.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+    btn.addEventListener('click', function () {
+      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? 'Light' : 'Dark';
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How I built a content engine that grew Spike's signups 5x and MRR 3x — Sreekar Kutadi">
+  <title>Content-Led Growth — Sreekar Kutadi</title>
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Apply saved theme before page renders to prevent flash -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV — same structure as homepage, paths go up one level
+  ============================================================ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-name">Sreekar Kutadi</a>
+      <div class="nav-links">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">Dark</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       CASE STUDY CONTENT
+  ============================================================ -->
+  <main class="case-study-page">
+    <div class="container--narrow">
+
+      <!-- Back link -->
+      <a href="../index.html#work" class="back-link">← Back to work</a>
+
+      <!-- Eyebrow: number · company · type -->
+      <p class="cs-eyebrow">Case Study 01 · Spike.sh · Content Strategy</p>
+
+      <!-- Title -->
+      <h1 class="cs-title">How I built a content engine that grew Spike's signups 5x and MRR 3x</h1>
+
+      <!-- Meta bar: role · company · timeline -->
+      <div class="cs-meta">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Role</span>
+          <span>Content Marketer</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Company</span>
+          <span>Spike (spike.sh)</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Timeline</span>
+          <span>June 2025 – Present</span>
+        </div>
+      </div>
+
+
+      <!-- ============================================================
+           CASE STUDY BODY
+           Replace the content below with the rendered output
+           from case-study-1.md. Convert markdown to HTML:
+             # → <h2>, ## → <h3>, paragraphs → <p>, lists → <ul>
+      ============================================================ -->
+      <div class="cs-body">
+
+        <!-- PLACEHOLDER — replace with content from case-study-1.md -->
+        <p><em>Content from case-study-1.md goes here. Replace this placeholder with the full case study body, converting markdown headings, paragraphs, and lists to the HTML elements above.</em></p>
+
+      </div>
+      <!-- END CASE STUDY BODY -->
+
+
+      <!-- ============================================================
+           METRICS CALLOUT BLOCK
+           Key results, highlighted. Update numbers as needed.
+      ============================================================ -->
+      <div class="metrics-callout">
+        <h3>Results</h3>
+        <ul>
+          <li>
+            <span class="metric-number">5x</span>
+            <span class="metric-label">Monthly signup growth from organic content</span>
+          </li>
+          <li>
+            <span class="metric-number">3x</span>
+            <span class="metric-label">MRR growth attributed to content-led signups</span>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- ============================================================
+           BOTTOM NAVIGATION — previous / next case study
+      ============================================================ -->
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="../index.html#work" class="cs-nav-prev">Back to work</a>
+        <a href="case-study-2.html" class="cs-nav-next">AI Marketing Stack</a>
+      </nav>
+
+    </div>
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER — same as homepage
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Sreekar Kutadi</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/sreekar-writer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:sreekar.work@gmail.com">Email</a>
+      </div>
+      <span>© 2026 Sreekar Kutadi</span>
+    </div>
+  </footer>
+
+
+  <!-- Theme toggle script -->
+  <script>
+    var btn  = document.getElementById('themeToggle');
+    var html = document.documentElement;
+    btn.textContent = html.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+    btn.addEventListener('click', function () {
+      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? 'Light' : 'Dark';
+    });
+  </script>
+
+</body>
+</html>

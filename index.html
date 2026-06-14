@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sreekar Kutadi — B2B SaaS Content Marketer with a builder's mindset.">
+  <title>Sreekar Kutadi — B2B SaaS Content Marketer</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Apply saved theme before page renders to prevent flash -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV — Fixed top bar
+       Left: name (links home)  |  Right: Work · Contact · Toggle
+  ============================================================ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-name">Sreekar Kutadi</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">Dark</button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       SECTION 1 — HERO
+       Two columns: bio text left, photo right.
+  ============================================================ -->
+  <section class="hero">
+    <div class="container hero-inner">
+
+      <!-- Left: text content -->
+      <div class="hero-text">
+        <h1>Sreekar Kutadi</h1>
+        <p class="tagline">B2B SaaS Content Marketer with a builder's mindset</p>
+        <p class="bio">
+          I build content engines for B2B SaaS companies. I write BOFU content that drives signups,
+          create AI tools that automate marketing operations, and build knowledge resources that
+          establish topical authority. Currently at Spike, where I've spent the past year doing all
+          three. Before that, two years as a freelance B2B SaaS content writer.
+        </p>
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/sreekar-writer/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="mailto:sreekar.work@gmail.com">sreekar.work@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Right: photo -->
+      <div class="hero-photo">
+        <img src="images/sreekar.png" alt="Sreekar Kutadi">
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 2 — RESULTS
+       Four numbers. No heading — let the numbers speak.
+  ============================================================ -->
+  <section class="results">
+    <div class="container">
+      <div class="results-grid">
+
+        <div class="result-item">
+          <span class="result-number">5x</span>
+          <span class="result-label">Monthly signup growth</span>
+        </div>
+
+        <div class="result-item">
+          <span class="result-number">3x</span>
+          <span class="result-label">MRR growth</span>
+        </div>
+
+        <div class="result-item">
+          <span class="result-number">3.5x</span>
+          <span class="result-label">Organic traffic growth</span>
+        </div>
+
+        <div class="result-item">
+          <span class="result-number">4</span>
+          <span class="result-label">AI agents built from scratch</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 3 — WORK / CASE STUDIES
+       Three case study cards linking to individual pages.
+  ============================================================ -->
+  <section class="work" id="work">
+    <div class="container">
+
+      <p class="section-label">Selected work</p>
+
+      <div class="cards">
+
+        <!-- Card 1: Content-Led Growth -->
+        <a href="case-studies/case-study-1.html" class="card">
+          <span class="card-number">01</span>
+          <h2 class="card-title">How I built a content engine that grew Spike's signups 5x and MRR 3x</h2>
+          <p class="card-desc">
+            BOFU-first content strategy targeting buyers over browsers. Comparison posts, alternatives
+            roundups, and competitor research that turned readers into signups.
+          </p>
+          <div class="card-tags">
+            <span class="tag">5x signups</span>
+            <span class="tag">MRR 3x</span>
+          </div>
+        </a>
+
+        <!-- Card 2: AI Marketing Stack -->
+        <a href="case-studies/case-study-2.html" class="card">
+          <span class="card-number">02</span>
+          <h2 class="card-title">How I built Spike's AI marketing stack</h2>
+          <p class="card-desc">
+            Built four AI agents from scratch to automate what would otherwise take hours every week.
+          </p>
+          <div class="card-tags">
+            <span class="tag">4 AI agents</span>
+            <span class="tag">Marketing Automation</span>
+          </div>
+        </a>
+
+        <!-- Card 3: Topical Authority -->
+        <a href="case-studies/case-study-3.html" class="card">
+          <span class="card-number">03</span>
+          <h2 class="card-title">How I built Spike's topical authority in the incident management space</h2>
+          <p class="card-desc">
+            A 525-term glossary, 30 in-depth guides, and a content strategy that put Spike on the
+            AI search map.
+          </p>
+          <div class="card-tags">
+            <span class="tag">3.5x traffic</span>
+            <span class="tag">108 AI citations</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SECTION 4 — CONTACT
+       Simple contact block with links.
+  ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Let's talk</h2>
+      <p>
+        If you're a B2B SaaS founder building a content engine, or a team looking for a marketer
+        who also builds, I'd love to hear from you.
+      </p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/sreekar-writer/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="mailto:sreekar.work@gmail.com">sreekar.work@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       Three columns: name · links · copyright
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Sreekar Kutadi</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/sreekar-writer/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:sreekar.work@gmail.com">Email</a>
+      </div>
+      <span>© 2026 Sreekar Kutadi</span>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       THEME TOGGLE SCRIPT
+       Reads from / writes to localStorage.
+       Runs after DOM is ready so #themeToggle exists.
+  ============================================================ -->
+  <script>
+    var btn  = document.getElementById('themeToggle');
+    var html = document.documentElement;
+
+    // Sync button label with the already-applied theme
+    btn.textContent = html.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
+
+    btn.addEventListener('click', function () {
+      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? 'Light' : 'Dark';
+    });
+  </script>
+
+</body>
+</html>
