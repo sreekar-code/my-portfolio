@@ -440,8 +440,8 @@ li {
 }
 
 .contact-links a:hover {
-  color: var(--text-muted);
-  border-color: var(--text-muted);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 
@@ -722,38 +722,45 @@ li {
 
 /* ============================================================
    RESPONSIVE — MOBILE STYLES
-   Breakpoint at 680px — handles most phones and small tablets.
+   Breakpoint at 680px — phones and small tablets.
 ============================================================ */
 @media (max-width: 680px) {
 
-  /* Shrink nav name on small screens */
-  .nav-name {
-    font-size: 0.875rem;
+  /* Tighter side padding on mobile so content isn't cramped */
+  .container,
+  .container--narrow {
+    padding: 0 1.25rem;
+  }
+
+  /* Nav */
+  .nav-inner {
+    padding: 0 1.25rem;
   }
 
   .nav-links {
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .nav-links a {
-    font-size: 0.82rem;
+    font-size: 0.875rem;
+    /* Ensure tap targets are large enough */
+    padding: 0.25rem 0;
   }
 
-  /* Hero stacks vertically, photo above text on mobile */
+  /* Hero stacks: photo above text */
   .hero {
-    padding-top: 80px;
-    padding-bottom: 44px;
+    padding-top: 76px;
+    padding-bottom: 40px;
   }
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.75rem;
   }
 
-  /* Move photo before text on mobile */
   .hero-photo {
     order: -1;
-    width: 140px;
+    width: 120px;
   }
 
   .hero-text h1 {
@@ -764,7 +771,15 @@ li {
     font-size: 1rem;
   }
 
-  /* Results: 2x2 grid on mobile */
+  .hero-text .bio {
+    font-size: 0.925rem;
+  }
+
+  /* Results: 2×2 grid */
+  .results {
+    padding: 36px 0;
+  }
+
   .results-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
@@ -775,50 +790,107 @@ li {
     border-bottom: 1px solid var(--border);
   }
 
-  /* Keep border-bottom only on first row */
   .result-item:nth-child(3),
   .result-item:nth-child(4) {
     border-bottom: none;
   }
 
-  /* Add vertical divider between columns */
   .result-item:nth-child(odd) {
     border-right: 1px solid var(--border);
   }
 
   .result-number {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
-  /* Sections padding */
+  .results-context {
+    font-size: 0.8rem;
+  }
+
+  /* Work cards */
   .work {
-    padding: 44px 0;
+    padding: 40px 0;
   }
 
+  .card {
+    /* Disable slide animation on touch — no hover state */
+    transition: none;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+
+  /* Contact */
   .contact {
-    padding: 44px 0;
+    padding: 40px 0;
   }
 
-  /* Footer stacks */
-  .footer-inner {
+  .contact h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-links {
     flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
-  /* Case study title */
+  /* Contact links: bigger tap targets on mobile */
+  .contact-links a {
+    padding: 0.25rem 0;
+  }
+
+  /* Footer */
+  .footer-inner {
+    justify-content: center;
+  }
+
+  /* Case study page — no fixed nav, so less top padding */
+  .case-study-page {
+    padding-top: 28px;
+    padding-bottom: 56px;
+  }
+
   .cs-title {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
   }
 
-  /* Case study meta wraps */
+  .cs-eyebrow {
+    font-size: 0.72rem;
+  }
+
   .cs-meta {
     gap: 0.5rem 1rem;
+    margin-bottom: 2rem;
   }
 
-  /* Bottom nav stacks */
+  .cs-body {
+    font-size: 0.95rem;
+  }
+
+  .cs-body h2 {
+    font-size: 1.15rem;
+    margin-top: 2rem;
+  }
+
+  .metrics-callout {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .metrics-callout .metric-number {
+    font-size: 1.1rem;
+  }
+
+  /* Bottom nav stacks vertically */
   .cs-nav {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  /* Bigger tap targets on nav links */
+  .cs-nav a {
+    padding: 0.25rem 0;
   }
 }
