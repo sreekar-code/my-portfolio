@@ -137,6 +137,11 @@ li {
   color: var(--text-muted);
 }
 
+/* Case study nav: name only, left-aligned */
+.nav-inner--cs {
+  justify-content: flex-start;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -195,6 +200,17 @@ li {
   max-width: 560px;
   margin-bottom: 1rem;
   line-height: 1.75;
+}
+
+/* Inline links in bio stay gray but get an underline */
+.hero-text .bio a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-text .bio a:hover {
+  color: var(--accent);
 }
 
 /* Add spacing only after the last bio paragraph before the links */
@@ -592,15 +608,14 @@ li {
    The heading sits above the card, not inside it.
 */
 
-/* h2 heading that appears directly above the metrics card */
+/* h2 heading that appears directly above the metrics card — matches body h2 style */
 .metrics-heading {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .metrics-callout {
