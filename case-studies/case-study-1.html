@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,6 @@
   <title>Content-Led Growth — Sreekar Kutadi</title>
   <link rel="stylesheet" href="../styles.css">
 
-  <!-- Apply saved theme before page renders to prevent flash -->
-  <script>
-    (function () {
-      var t = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', t);
-    })();
-  </script>
 </head>
 <body>
 
@@ -26,7 +19,6 @@
       <div class="nav-links">
         <a href="../index.html#work">Work</a>
         <a href="../index.html#contact">Contact</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">Dark</button>
       </div>
     </div>
   </nav>
@@ -162,18 +154,6 @@
   </footer>
 
 
-  <!-- Theme toggle script -->
-  <script>
-    var btn  = document.getElementById('themeToggle');
-    var html = document.documentElement;
-    btn.textContent = html.getAttribute('data-theme') === 'dark' ? 'Light' : 'Dark';
-    btn.addEventListener('click', function () {
-      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      btn.textContent = next === 'dark' ? 'Light' : 'Dark';
-    });
-  </script>
 
 </body>
 </html>
