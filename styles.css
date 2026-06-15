@@ -809,40 +809,6 @@ li {
 
 
 
-/* === CASE STUDY BOTTOM NAV ===
-   Previous / next navigation between case studies.
-*/
-.cs-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 2.5rem;
-  margin-top: 3rem;
-  border-top: 1px solid var(--border);
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.cs-nav a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.15s ease;
-}
-
-.cs-nav a:hover {
-  color: var(--accent);
-}
-
-.cs-nav-prev::before {
-  content: "← ";
-}
-
-.cs-nav-next::after {
-  content: " →";
-}
-
 
 /* ============================================================
    RESPONSIVE — MOBILE STYLES
@@ -896,6 +862,10 @@ li {
   }
 
   .hero-text .bio {
+    font-size: 0.925rem;
+  }
+
+  .hero-text .bio-list li {
     font-size: 0.925rem;
   }
 
@@ -1007,15 +977,4 @@ li {
     font-size: 1.1rem;
   }
 
-  /* Bottom nav stacks vertically */
-  .cs-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  /* Bigger tap targets on nav links */
-  .cs-nav a {
-    padding: 0.25rem 0;
-  }
 }
